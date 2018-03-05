@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+		body {
+			font-family: monospace, sans-serif;
+			background: #262424;
+		}
+		
+		.wrapper {
+			width: 50%;
+			margin: auto;
+			background-color: #c1c1c1;
+			padding-top: 60px;
+			padding-bottom: 120px;
+			border-radius: 5px;
+		}
+		.button, #answer, h1, .manual {
+			color: #c1c1c1;
+			display: block;
+			margin: 20px auto;
+			background: #262424;
+			border-radius: 3px;
+			width: 50%;
+			height: 40px;
+		}
+		h1 {
+			font-size: 24px;
+			text-align: center; 
+			line-height: 40px;
+			width: 80%;
+		}
+		#answer {
+			font-size: 20px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.button {
+			font-size: 18px;
+			font-family: monospace;
+			border: none;
+		}
+		.button{
+			transition: width .5s, color .5s, background .5s;
+		}
+		.button:hover {
+			color: #262424;
+			background: #c1c1c1;
+			border: 1px solid #262424;
+			width: 300px;
+			transition: width .5s, color .5s, background .5s;
+		}
+		.listItem { 
+			visibility: hidden;
+			position: relative;
+			font-size: 14px;
+			color: #262424;
+			border: 1px solid #262424;
+			line-height: 0;
+			border-radius: 3px;
+			padding: 5px 0;
+			overflow: hidden;
+		}
+		.manual:hover .listItem {
+			visibility: visible;
+			margin-top: 5px;
+			line-height: 16px;
+			transition: margin-bottom .05s, visibility .5s;
+		}
+		.manual {
+			text-align: center;
+			line-height: 40px;
+			margin-bottom: 0;
+			transition: margin-bottom .5s;
+		}
+		.manual:hover {
+			margin-bottom: 180px;
+			transition: margin-bottom .5s;
+		}
+	</style>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Calculator on JS</h1>
+		<button class="button" onclick="result()">Open Calculator</button>
+		<span id="answer">Answer</span>
+		<div class="manual"> Manual
+			<div class="listItem collapsed">-You can't divide by zero</div>
+			<div class="listItem collapsed">-You can't write letters in operands</div>
+			<div class="listItem collapsed">To sum use "plus", "+" or "плюс"</div>
+			<div class="listItem collapsed">To substract use "minus", "-" or "минус"</div>
+			<div class="listItem collapsed">To multiply use "multiply", "*" or "умножить"</div>
+			<div class="listItem collapsed">To divide use "divide", "/" or "делить"</div>
+		</ul>
+	</div>
+</body>
+</html>
